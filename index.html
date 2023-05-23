@@ -26,10 +26,10 @@
     <nav aria-label="menu nav" class="bg-gray-800 pt-2 md:pt-1 pb-1 px-1 mt-0 h-auto fixed w-full z-20 top-0">
 
         <div class="flex flex-wrap items-center">
-            <div class="flex flex-shrink md:w-1/3 justify-center md:justify-start text-white p-1">
+            <div class="flex flex-shrink md:w-1/3 justify-center md:justify-start text-white">
                 <a href="/" aria-label="Home" class="flex text-center p-1 justify-center">
-                    <span class="text-xl flex p-1 justify-center"><img src="./scr/minecraft_logo_icon_168974.svg" alt="minecraft_logo" width="40px"></span>
-                    <span class="text-xl flex p-1 justify-center mt-1">Minecal</span>
+                    <span class="text-xl flex justify-center"><img src="./scr/minecraft_logo_icon_168974.svg" alt="minecraft_logo" width="40px"></span>
+                    <span class="text-xl flex ml-1 justify-center mt-1">Minecal</span>
                 </a>
             </div>
 
@@ -44,23 +44,23 @@
                 </span>
             </div>
 
-            <div class=" flex flex-1 md:w-1/3 justify-center md:justify-start text-white px-2 text-center">
-                <span class="hover-nav relative w-full border-b-4 m-1 border-t-4 p-1">
+            <div class=" flex flex-1 md:w-1/3 justify-center text-white px-2 text-center">
+                <span class="hover-nav relative w-full border-b-4 m-1 border-t-4">
                     <a href="#ore">Ore</a>
                 </span>
-                <span class="hover-nav relative w-full border-b-4 border-t-4 m-1 p-1">
+                <span class="hover-nav relative w-full border-b-4 border-t-4 m-1 ">
                     <a href="#redstone">Redstone</a>
                 </span>
-                <span class="hover-nav relative w-full border-b-4 border-t-4 m-1 p-1">
+                <span class="hover-nav relative w-full border-b-4 border-t-4 m-1">
                     <a href="">Wood</a>
                 </span>
-                <span class="hover-nav relative w-full border-b-4 border-t-4 m-1 p-1">
+                <span class="hover-nav relative w-full border-b-4 border-t-4 m-1 ">
                     <a href="">Tools</a>
                 </span>
-                <span class="hover-nav relative w-full border-b-4 border-t-4 m-1 p-1">
+                <span class="hover-nav relative w-full border-b-4 border-t-4 m-1 ">
                     <a href="">Food</a>
                 </span>
-                <span class="hover-nav relative w-full border-b-4 border-t-4 m-1 p-1">
+                <span class="hover-nav relative w-full border-b-4 border-t-4 m-1 ">
                     <a href="">Portal</a>
                 </span>
             </div>
@@ -301,21 +301,29 @@
                                 <div class="flex-shrink pr-4">
                                     <div class="rounded-full p-5 bg-green-600"><img src="./scr/img_poweredrail.png" alt="" width="50"></div>
                                 </div>
-                                <div class="flex-1 text-right md:text-center">
+                                <div class="flex-1 text-center md:text-center">
                                     <h2 class="font-bold uppercase text-gray-600">Power Rail (1=6)</h2>
                                     <label for="powerrail"></label>
                                     <input type="text" id="powerrail" name="powerrail" class="mb-2 w-20 text-center rounded-lg"><br>
                                     <input class="bg-gradient-to-b from-blue-800 to-blue-300 p-1 rounded-lg	" type="button" value="Calculate" onclick="calculate_powerrail()">
                                 </div>
-                                <div class="flex-1 text-right md:text-center">
-                                    <h2 class="font-bold uppercase text-gray-600">Powerrail</h2>
-                                    <p class="font-bold text-3xl" id="powerrail_real"></p>
-                                    <h2 class="font-bold uppercase text-gray-600">Gold Ingot</h2>
-                                    <p class="font-bold text-3xl" id="powerrail_gold"></p>
-                                    <h2 class="font-bold uppercase text-gray-600">Redstone</h2>
-                                    <p class="font-bold text-3xl" id="powerrail_redstone"></p>
-                                    <h2 class="font-bold uppercase text-gray-600">Stick</h2>
-                                    <p class="font-bold text-3xl" id="powerrail_stick"></p>
+                                <div class="flex-1 text-center md:text-center">
+                                    <div class="border-solid border-black border-2 rounded-lg m-1">
+                                        <h2 class="font-bold uppercase text-gray-600">Powerrail</h2>
+                                        <p class="font-bold text-3xl" id="powerrail_real"></p>
+                                    </div>
+                                    <div class="border-solid border-black border-2 rounded-lg m-1">
+                                        <h2 class="font-bold uppercase text-gray-600">Gold Ingot</h2>
+                                        <p class="font-bold text-3xl" id="powerrail_gold"></p>
+                                    </div>
+                                    <div class="border-solid border-black border-2 rounded-lg m-1">
+                                        <h2 class="font-bold uppercase text-gray-600">Redstone</h2>
+                                        <p class="font-bold text-3xl" id="powerrail_redstone"></p>
+                                    </div>
+                                    <div class="border-solid border-black border-2 rounded-lg m-1">
+                                        <h2 class="font-bold uppercase text-gray-600">Stick</h2>
+                                        <p class="font-bold text-3xl" id="powerrail_stick"></p>
+                                    </div>
                                 </div>
 
                                 
@@ -331,19 +339,25 @@
                                 <div class="flex-shrink pr-4">
                                     <div class="rounded-full p-5 bg-pink-600"><img src="./scr/img_track.png" alt="" width="50"></div>
                                 </div>
-                                <div class="flex-1 text-right md:text-center">
+                                <div class="flex-1 text-center md:text-center">
                                     <h2 class="font-bold uppercase text-gray-600">Rail (1=16)</h2>
                                     <label for="rail"></label>
                                     <input type="text" id="rail" name="rail" class="mb-2 w-20 text-center rounded-lg"><br>
                                     <input class="bg-gradient-to-b from-blue-800 to-blue-300 p-1 rounded-lg	" type="button" value="Calculate" onclick="calculate_rail()">
                                 </div>
-                                <div class="flex-1 text-right md:text-center">
-                                    <h2 class="font-bold uppercase text-gray-600">Rail</h2>
-                                    <p class="font-bold text-3xl" id="rail_real"></p>
-                                    <h2 class="font-bold uppercase text-gray-600">Gold Ingot</h2>
-                                    <p class="font-bold text-3xl" id="rail_iron"></p>
-                                    <h2 class="font-bold uppercase text-gray-600">Stick</h2>
-                                    <p class="font-bold text-3xl" id="rail_stick"></p>
+                                <div class="flex-1 text-center md:text-center">
+                                    <div class="border-solid border-black border-2 rounded-lg m-1">
+                                        <h2 class="font-bold uppercase text-gray-600">Rail</h2>
+                                        <p class="font-bold text-3xl" id="rail_real"></p>
+                                    </div>
+                                    <div class="border-solid border-black border-2 rounded-lg m-1">
+                                        <h2 class="font-bold uppercase text-gray-600">Gold Ingot</h2>
+                                        <p class="font-bold text-3xl" id="rail_iron"></p>
+                                    </div>
+                                    <div class="border-solid border-black border-2 rounded-lg m-1">
+                                        <h2 class="font-bold uppercase text-gray-600">Stick</h2>
+                                        <p class="font-bold text-3xl" id="rail_stick"></p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -356,21 +370,29 @@
                                 <div class="flex-shrink pr-4">
                                     <div class="rounded-full p-5 bg-yellow-600"><img src="./scr/img_detectorrail.png" alt="" width="50"></div>
                                 </div>
-                                <div class="flex-1 text-right md:text-center">
+                                <div class="flex-1 text-center md:text-center">
                                     <h2 class="font-bold uppercase text-gray-600">Detector Rail (1=6)</h2>
                                     <label for="detectorrail"></label>
                                     <input type="text" id="detectorrail" name="detectorrail" class="mb-2 w-20 text-center rounded-lg"><br>
                                     <input class="bg-gradient-to-b from-blue-800 to-blue-300 p-1 rounded-lg	" type="button" value="Calculate" onclick="calculate_detectorrail()">
                                 </div>
-                                <div class="flex-1 text-right md:text-center">
-                                    <h2 class="font-bold uppercase text-gray-600">Detectorrail</h2>
-                                    <p class="font-bold text-3xl" id="detectorrail_real"></p>
-                                    <h2 class="font-bold uppercase text-gray-600">Iron Ingot</h2>
-                                    <p class="font-bold text-3xl" id="detectorrail_iron"></p>
-                                    <h2 class="font-bold uppercase text-gray-600">Redstone</h2>
-                                    <p class="font-bold text-3xl" id="detectorrail_redstone"></p>
-                                    <h2 class="font-bold text-gray-600">Stone Pressure Plate</h2>
-                                    <p class="font-bold text-3xl" id="detectorrail_stone"></p>
+                                <div class="flex-1 text-center md:text-center">
+                                    <div class="border-solid border-black border-2 rounded-lg m-1">
+                                        <h2 class="font-bold uppercase text-gray-600">Detectorrail</h2>
+                                        <p class="font-bold text-3xl" id="detectorrail_real"></p>
+                                    </div>
+                                    <div class="border-solid border-black border-2 rounded-lg m-1">
+                                        <h2 class="font-bold uppercase text-gray-600">Iron Ingot</h2>
+                                        <p class="font-bold text-3xl" id="detectorrail_iron"></p>
+                                    </div>
+                                    <div class="border-solid border-black border-2 rounded-lg m-1">
+                                        <h2 class="font-bold uppercase text-gray-600">Redstone</h2>
+                                        <p class="font-bold text-3xl" id="detectorrail_redstone"></p>
+                                    </div>
+                                    <div class="border-solid border-black border-2 rounded-lg m-1">
+                                        <h2 class="font-bold text-gray-600">Stone Pressure Plate</h2>
+                                        <p class="font-bold text-3xl" id="detectorrail_stone"></p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -386,21 +408,29 @@
                                 <div class="flex-shrink pr-4">
                                     <div class="rounded-full p-5 bg-green-600"><img src="./scr/img_activatorrail.png" alt="" width="50"></div>
                                 </div>
-                                <div class="flex-1 text-right md:text-center">
+                                <div class="flex-1 text-center md:text-center ">
                                     <h2 class="font-bold uppercase text-gray-600">Activator Rail (1=6)</h2>
                                     <label for="activatorrail"></label>
                                     <input type="text" id="activatorrail" name="activatorrail" class="mb-2 w-20 text-center rounded-lg"><br>
                                     <input class="bg-gradient-to-b from-blue-800 to-blue-300 p-1 rounded-lg	" type="button" value="Calculate" onclick="calculate_activatorrail()">
                                 </div>
-                                <div class="flex-1 text-right md:text-center">
-                                    <h2 class="font-bold uppercase text-gray-600">Activatorrail</h2>
-                                    <p class="font-bold text-3xl" id="activatorrail_real"></p>
-                                    <h2 class="font-bold uppercase text-gray-600">Iron Ingot</h2>
-                                    <p class="font-bold text-3xl" id="activatorrail_iron"></p>
-                                    <h2 class="font-bold uppercase text-gray-600">Redstone Torch</h2>
-                                    <p class="font-bold text-3xl" id="activatorrail_redstone_torch"></p>
-                                    <h2 class="font-bold uppercase text-gray-600">Stick</h2>
-                                    <p class="font-bold text-3xl" id="activatorrail_stick"></p>
+                                <div class="flex-1 text-center md:text-center ">
+                                    <div class="border-solid border-black border-2 rounded-lg m-1">
+                                        <h2 class="font-bold uppercase text-gray-600">Activatorrail</h2>
+                                        <p class="font-bold text-3xl" id="activatorrail_real"></p>
+                                    </div>
+                                    <div class="border-solid border-black border-2 rounded-lg m-1">
+                                        <h2 class="font-bold uppercase text-gray-600">Iron Ingot</h2>
+                                        <p class="font-bold text-3xl" id="activatorrail_iron"></p>
+                                    </div>  
+                                    <div class="border-solid border-black border-2 rounded-lg m-1">
+                                        <h2 class="font-bold uppercase text-gray-600">Redstone Torch</h2>
+                                        <p class="font-bold text-3xl" id="activatorrail_redstone_torch"></p>
+                                    </div>
+                                    <div class="border-solid border-black border-2 rounded-lg m-1">
+                                        <h2 class="font-bold uppercase text-gray-600">Stick</h2>
+                                        <p class="font-bold text-3xl" id="activatorrail_stick"></p>
+                                    </div>
                                 </div>
 
                                 
@@ -414,21 +444,28 @@
                         <div class="bg-gradient-to-b from-pink-200 to-pink-100 border-b-4 border-pink-500 rounded-lg shadow-xl p-5">
                             <div class="flex flex-row items-center">
                                 <div class="flex-shrink pr-4">
-                                    <div class="rounded-full p-5 bg-pink-600"><img src="./scr/img_track.png" alt="" width="50"></div>
+                                    <div class="rounded-full p-5 bg-pink-600"><img src="./scr/img_redstonetorch.png" alt="" width="50"></div>
                                 </div>
-                                <div class="flex-1 text-right md:text-center">
-                                    <h2 class="font-bold uppercase text-gray-600">Rail (1=16)</h2>
-                                    <label for="rail"></label>
-                                    <input type="text" id="rail" name="rail" class="mb-2 w-20 text-center rounded-lg"><br>
-                                    <input class="bg-gradient-to-b from-blue-800 to-blue-300 p-1 rounded-lg	" type="button" value="Calculate" onclick="calculate_rail()">
+                                <div class="flex-1 text-center md:text-center">
+                                    <h2 class="font-bold uppercase text-gray-600">Redstone Torch</h2>
+                                    <label for="redstone_torch"></label>
+                                    <input type="text" id="redstone_torch" name="redstone_torch" class="mb-2 w-20 text-center rounded-lg"><br>
+                                    <input class="bg-gradient-to-b from-blue-800 to-blue-300 p-1 rounded-lg	" type="button" value="Calculate" onclick="calculate_redstone_torch()">
                                 </div>
-                                <div class="flex-1 text-right md:text-center">
-                                    <h2 class="font-bold uppercase text-gray-600">Rail</h2>
-                                    <p class="font-bold text-3xl" id="rail_real"></p>
-                                    <h2 class="font-bold uppercase text-gray-600">Gold Ingot</h2>
-                                    <p class="font-bold text-3xl" id="rail_iron"></p>
-                                    <h2 class="font-bold uppercase text-gray-600">Stick</h2>
-                                    <p class="font-bold text-3xl" id="rail_stick"></p>
+                                <div class="flex-1 text-center md:text-center">
+                                
+                                    <div class="border-solid border-black border-2 rounded-lg m-1">
+                                        <h2 class="font-bold uppercase text-gray-600">Redstonetorch</h2>
+                                        <p class="font-bold text-3xl" id="redstone_torch_real"></p>
+                                    </div>
+                                    <div class="border-solid border-black border-2 rounded-lg m-1">
+                                        <h2 class="font-bold uppercase text-gray-600">Redstone</h2>
+                                        <p class="font-bold text-3xl" id="_redstone_torch_redstone"></p>
+                                    </div>
+                                    <div class="border-solid border-black border-2 rounded-lg m-1">
+                                        <h2 class="font-bold uppercase text-gray-600">Stick</h2>
+                                        <p class="font-bold text-3xl" id="_redstone_torch_stick"></p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -439,11 +476,27 @@
                         <div class="bg-gradient-to-b from-yellow-200 to-yellow-100 border-b-4 border-yellow-600 rounded-lg shadow-xl p-5">
                             <div class="flex flex-row items-center">
                                 <div class="flex-shrink pr-4">
-                                    <div class="rounded-full p-5 bg-yellow-600"><img src="./scr/img_detectorrail.png" alt="" width="50"></div>
+                                    <div class="rounded-full p-5 bg-yellow-600"><img src="./scr/img_lever.png" alt="" width="50"></div>
                                 </div>
-                                <div class="flex-1 text-right md:text-center">
-                                    <h2 class="font-bold uppercase text-gray-600">Nugget</h2>
-                                    <p class="font-bold text-3xl" id="result2"></p>
+                                <div class="flex-1 text-center md:text-center">
+                                    <h2 class="font-bold uppercase text-gray-600">Lever</h2>
+                                    <label for="lever"></label>
+                                    <input type="text" id="lever" name="lever" class="mb-2 w-20 text-center rounded-lg"><br>
+                                    <input class="bg-gradient-to-b from-blue-800 to-blue-300 p-1 rounded-lg	" type="button" value="Calculate" onclick="calculate_lever()">
+                                </div>
+                                <div class="flex-1 text-center md:text-center">
+                                    <div class="border-solid border-black border-2 rounded-lg m-1">
+                                        <h2 class="font-bold uppercase text-gray-600">Lever</h2>
+                                        <p class="font-bold text-3xl" id="lever_real"></p>
+                                    </div>
+                                    <div class="border-solid border-black border-2 rounded-lg m-1">
+                                        <h2 class="font-bold uppercase text-gray-600">Cobblestone</h2>
+                                        <p class="font-bold text-3xl" id="lever_cobblestone"></p>
+                                    </div>
+                                    <div class="border-solid border-black border-2 rounded-lg m-1">
+                                        <h2 class="font-bold uppercase text-gray-600">Stick</h2>
+                                        <p class="font-bold text-3xl" id="lever_stick"></p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -454,11 +507,6 @@
                     
                 </div>
                 
-
-        
-                
-                
-
 
             </div>
         </section>

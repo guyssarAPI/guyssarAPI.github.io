@@ -128,4 +128,34 @@
 
         }
         //cal Activatorrail
+
+        //cal Redstone Torch
+        function calculate_redstone_torch(){
+            var redstone_torch = parseInt(document.getElementById('redstone_torch').value);
+            var redstone_torch1 = Math.floor(redstone_torch);
+
+            var redstone_torch_real = redstone_torch1*1;
+            document.getElementById('redstone_torch_real').innerHTML = redstone_torch_real;
+            var _redstone_torch_redstone = redstone_torch1*1;
+            document.getElementById('_redstone_torch_redstone').innerHTML = _redstone_torch_redstone;
+            var _redstone_torch_stick = redstone_torch1*1;
+            document.getElementById('_redstone_torch_stick').innerHTML = _redstone_torch_stick;
+            
+        }
+        //cal Redstone Torch
+
+        //cal Lever
+        function calculate_lever(){
+            var lever = parseInt(document.getElementById('lever').value);
+            var lever1 = Math.floor(lever);
+
+            var lever_real = lever1*1;
+            document.getElementById('lever_real').innerHTML = lever_real;
+            var lever_cobblestone = lever1*1;
+            document.getElementById('lever_cobblestone').innerHTML = lever_cobblestone;
+            var lever_stick = lever1*1;
+            document.getElementById('lever_stick').innerHTML = lever_stick;
+            
+        }
+        //cal lever
     //cal redstone
