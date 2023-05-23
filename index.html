@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Minecal</title>
+    <meta name="guyssar" content="guyssar">
+
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/> <!--Replace with your tailwind.css once created-->
+    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet"> <!--Totally optional :) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js" integrity="sha256-xKeoJ50pzbUGkpQxDYHD7o7hxe0LaOGeguUidbq6vis=" crossorigin="anonymous"></script>
+    <script src="https://guyssarapi.github.io/minecal.js"></script>
+    <style>.hover-nav{background-color: #222; transition: 0.5 ease;}.hover-nav:hover{background-color: #dcdcdc;transition: 0.5 ease;color: black;font-weight: bold;}</style>
+</head>
+
+<body class="bg-gray-800 font-sans leading-normal tracking-normal mt-12">
+
+<header>
+    <!--Nav-->
+    <nav aria-label="menu nav" class="bg-gray-800 pt-2 md:pt-1 pb-1 px-1 mt-0 h-auto fixed w-full z-20 top-0">
+
+        <div class="flex flex-wrap items-center">
+            <div class="flex flex-shrink md:w-1/3 justify-center md:justify-start text-white p-1">
+                <a href="/" aria-label="Home" class="flex text-center p-1 justify-center">
+                    <span class="text-xl flex p-1 justify-center"><img src="./scr/minecraft_logo_icon_168974.svg" alt="minecraft_logo" width="40px"></span>
+                    <span class="text-xl flex p-1 justify-center mt-1">Minecal</span>
+                </a>
+            </div>
+
+            <div class=" flex flex-1 md:w-1/3 justify-center md:justify-start text-white px-2">
+                <span class="relative w-full">
+                    <input aria-label="search" type="search" id="search" placeholder="Search" class="w-full bg-gray-900 text-white transition border border-transparent focus:outline-none focus:border-gray-400 rounded py-3 px-2 pl-10 appearance-none leading-normal">
+                    <div class="absolute search-icon" style="top: 1rem; left: .8rem;">
+                        <svg class="fill-current pointer-events-none text-white w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                            <path d="M12.9 14.32a8 8 0 1 1 1.41-1.41l5.35 5.33-1.42 1.42-5.33-5.34zM8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"></path>
+                        </svg>
+                    </div>
+                </span>
+            </div>
+
+            <div class=" flex flex-1 md:w-1/3 justify-center md:justify-start text-white px-2 text-center">
+                <span class="hover-nav relative w-full border-b-4 m-1 border-t-4 p-1">
+                    <a href="#ore">Ore</a>
+                </span>
+                <span class="hover-nav relative w-full border-b-4 border-t-4 m-1 p-1">
+                    <a href="#redstone">Redstone</a>
+                </span>
+                <span class="hover-nav relative w-full border-b-4 border-t-4 m-1 p-1">
+                    <a href="">Wood</a>
+                </span>
+                <span class="hover-nav relative w-full border-b-4 border-t-4 m-1 p-1">
+                    <a href="">Tools</a>
+                </span>
+                <span class="hover-nav relative w-full border-b-4 border-t-4 m-1 p-1">
+                    <a href="">Food</a>
+                </span>
+                <span class="hover-nav relative w-full border-b-4 border-t-4 m-1 p-1">
+                    <a href="">Portal</a>
+                </span>
+            </div>
+
+            
+        </div>
+
+    </nav>
+    <!--Nav-->
+</header>
+
+
+<main>
+    <!--Nav2-->
+    <div>
+        
+        <br>
+        <br>
+        <section class="w-full" id="ore">
+
+            <div class="main-content flex-1 bg-gray-100 mt-12 md:mt-2 pb-24 md:pb-5">
+
+
+                <div class="bg-gray-800 pt-3" >
+                    <div class="rounded-tl-3xl bg-gradient-to-r from-blue-900 to-gray-800 p-4 shadow text-2xl text-white">
+                        <h1 class="font-bold pl-2">Ore Block To</h1>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap">
+                    <div class="w-full md:w-1/2 xl:w-1/3 p-6">
+                        <!--Metric Card-->
+                        <div class="bg-gradient-to-b from-green-200 to-green-100 border-b-4 border-green-600 rounded-lg shadow-xl p-5">
+                            <div class="flex flex-row items-center">
+                                <div class="flex-shrink pr-4">
+                                    <div class="rounded-full p-5 bg-green-600"><img src="./scr/Block_of_Iron_JE4_BE3.webp" alt="" width="50"></div>
+                                </div>
+                                <div class="flex-1 text-right md:text-center">
+                                    <h2 class="font-bold uppercase text-gray-600">Block</h2>
+                                    <label for="blockore"></label>
+                                    <input type="text" id="blockore" name="blockore" class="mb-2 w-20 text-center rounded-lg"><br>
+                                    <input class="bg-gradient-to-b from-blue-800 to-blue-300 p-1 rounded-lg	" type="button" value="Calculate" onclick="calculate_ore_block()">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!--/Metric Card-->
+                    </div>
+                    <div class="w-full md:w-1/2 xl:w-1/3 p-6">
+                        <!--Metric Card-->
+                        <div class="bg-gradient-to-b from-pink-200 to-pink-100 border-b-4 border-pink-500 rounded-lg shadow-xl p-5">
+                            <div class="flex flex-row items-center">
+                                <div class="flex-shrink pr-4">
+                                    <div class="rounded-full p-5 bg-pink-600"><img src="./scr/Iron_Ingot_JE3_BE2.webp" alt="" width="50"></div>
+                                </div>
+                                <div class="flex-1 text-right md:text-center">
+                                    <h2 class="font-bold uppercase text-gray-600">Ingot</h2>
+                                    <p class="font-bold text-3xl" id="result"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/Metric Card-->
+                    </div>
+                    <div class="w-full md:w-1/2 xl:w-1/3 p-6">
+                        <!--Metric Card-->
+                        <div class="bg-gradient-to-b from-yellow-200 to-yellow-100 border-b-4 border-yellow-600 rounded-lg shadow-xl p-5">
+                            <div class="flex flex-row items-center">
+                                <div class="flex-shrink pr-4">
+                                    <div class="rounded-full p-5 bg-yellow-600"><img src="./scr/Iron_Nugget_JE1_BE1.webp" alt="" width="50"></div>
+                                </div>
+                                <div class="flex-1 text-right md:text-center">
+                                    <h2 class="font-bold uppercase text-gray-600">Nugget</h2>
+                                    <p class="font-bold text-3xl" id="result2"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/Metric Card-->
+                    </div>
+                    
+                </div>
+                
+
+        <!--Ingot-->
+                <div id="main" class="main-content flex-1 bg-gray-100 mt-12 md:mt-2 pb-24 md:pb-5">
+
+                    <div class="bg-gray-800 pt-3">
+                        <div class="rounded-tl-3xl bg-gradient-to-r from-blue-900 to-gray-800 p-4 shadow text-2xl text-white">
+                            <h1 class="font-bold pl-2">Ore Ingot To</h1>
+                        </div>
+                    </div>
+    
+                    <div class="flex flex-wrap">
+                        <div class="w-full md:w-1/2 xl:w-1/3 p-6">
+                            <!--Metric Card-->
+                            <div class="bg-gradient-to-b from-green-200 to-green-100 border-b-4 border-green-600 rounded-lg shadow-xl p-5">
+                                <div class="flex flex-row items-center">
+                                    <div class="flex-shrink pr-4">
+                                        <div class="rounded-full p-5 bg-green-600"><img src="./scr/Block_of_Iron_JE4_BE3.webp" alt="" width="50"></div>
+                                    </div>
+                                    <div class="flex-1 text-right md:text-center">
+                                        <h2 class="font-bold uppercase text-gray-600">Block</h2>
+                                        <label for="blockore"></label>
+                                        <p class="font-bold text-3xl" id="result3"></p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!--/Metric Card-->
+                        </div>
+                        <div class="w-full md:w-1/2 xl:w-1/3 p-6">
+                            <!--Metric Card-->
+                            <div class="bg-gradient-to-b from-pink-200 to-pink-100 border-b-4 border-pink-500 rounded-lg shadow-xl p-5">
+                                <div class="flex flex-row items-center">
+                                    <div class="flex-shrink pr-4">
+                                        <div class="rounded-full p-5 bg-pink-600"><img src="./scr/Iron_Ingot_JE3_BE2.webp" alt="" width="50"></div>
+                                    </div>
+                                    <div class="flex-1 text-right md:text-center">
+                                        <h2 class="font-bold uppercase text-gray-600">Ingot</h2>
+                                        <input type="text" id="blockore2" name="blockore2" class="mb-2 w-20 text-center rounded-lg"><br>
+                                        <input class="bg-gradient-to-b from-blue-800 to-blue-300 p-1 rounded-lg	" type="button" value="Calculate" onclick="calculate_ore_Ingot()">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/Metric Card-->
+                        </div>
+                        <div class="w-full md:w-1/2 xl:w-1/3 p-6">
+                            <!--Metric Card-->
+                            <div class="bg-gradient-to-b from-yellow-200 to-yellow-100 border-b-4 border-yellow-600 rounded-lg shadow-xl p-5">
+                                <div class="flex flex-row items-center">
+                                    <div class="flex-shrink pr-4">
+                                        <div class="rounded-full p-5 bg-yellow-600"><img src="./scr/Iron_Nugget_JE1_BE1.webp" alt="" width="50"></div>
+                                    </div>
+                                    <div class="flex-1 text-right md:text-center">
+                                        <h2 class="font-bold uppercase text-gray-600">Nugget</h2>
+                                        <p class="font-bold text-3xl" id="result4"></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/Metric Card-->
+                        </div>
+                        
+                    </div>
+                </div>
+        <!--Ingot-->
+
+        <!--Nugget-->
+                    <div id="main" class="main-content flex-1 bg-gray-100 mt-12 md:mt-2 pb-24 md:pb-5">
+
+                        <div class="bg-gray-800 pt-3">
+                            <div class="rounded-tl-3xl bg-gradient-to-r from-blue-900 to-gray-800 p-4 shadow text-2xl text-white">
+                                <h1 class="font-bold pl-2">Ore Nugget To</h1>
+                            </div>
+                        </div>
+        
+                        <div class="flex flex-wrap">
+                            <div class="w-full md:w-1/2 xl:w-1/3 p-6">
+                                <!--Metric Card-->
+                                <div class="bg-gradient-to-b from-green-200 to-green-100 border-b-4 border-green-600 rounded-lg shadow-xl p-5">
+                                    <div class="flex flex-row items-center">
+                                        <div class="flex-shrink pr-4">
+                                            <div class="rounded-full p-5 bg-green-600"><img src="./scr/Block_of_Iron_JE4_BE3.webp" alt="" width="50"></div>
+                                        </div>
+                                        <div class="flex-1 text-right md:text-center">
+                                            <h2 class="font-bold uppercase text-gray-600">Block</h2>
+                                            <label for="blockore"></label>
+                                            <p class="font-bold text-3xl" id="result5"></p>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!--/Metric Card-->
+                            </div>
+                            <div class="w-full md:w-1/2 xl:w-1/3 p-6">
+                                <!--Metric Card-->
+                                <div class="bg-gradient-to-b from-pink-200 to-pink-100 border-b-4 border-pink-500 rounded-lg shadow-xl p-5">
+                                    <div class="flex flex-row items-center">
+                                        <div class="flex-shrink pr-4">
+                                            <div class="rounded-full p-5 bg-pink-600"><img src="./scr/Iron_Ingot_JE3_BE2.webp" alt="" width="50"></div>
+                                        </div>
+                                        <div class="flex-1 text-right md:text-center">
+                                            <h2 class="font-bold uppercase text-gray-600">Ingot</h2>
+                                            <p class="font-bold text-3xl" id="result6"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/Metric Card-->
+                            </div>
+                            <div class="w-full md:w-1/2 xl:w-1/3 p-6">
+                                <!--Metric Card-->
+                                <div class="bg-gradient-to-b from-yellow-200 to-yellow-100 border-b-4 border-yellow-600 rounded-lg shadow-xl p-5">
+                                    <div class="flex flex-row items-center">
+                                        <div class="flex-shrink pr-4">
+                                            <div class="rounded-full p-5 bg-yellow-600"><img src="./scr/Iron_Nugget_JE1_BE1.webp" alt="" width="50"></div>
+                                        </div>
+                                        <div class="flex-1 text-right md:text-center">
+                                            <h2 class="font-bold uppercase text-gray-600">Nugget</h2>
+                                            <input type="text" id="blockore3" name="blockore3" class="mb-2 w-20 text-center rounded-lg"><br>
+                                            <input class="bg-gradient-to-b from-blue-800 to-blue-300 p-1 rounded-lg	" type="button" value="Calculate" onclick="calculate_ore_Nugget()">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/Metric Card-->
+                            </div>
+                            
+                        </div>
+
+                    </div>
+            <!--Nugget-->
+                
+                
+
+
+            </div>
+        </section>
+        <br>
+
+
+<!--Redstone-->
+        <section class="w-full" id="redstone">
+
+            <div id="" class="main-content flex-1 bg-gray-100 mt-12 md:mt-2 pb-24 md:pb-5">
+
+
+                <div class="bg-gray-800 pt-3" >
+                    <div class="rounded-tl-3xl bg-gradient-to-r from-red-900 to-gray-800 p-4 shadow text-2xl text-white">
+                        <h1 class="font-bold pl-2">Redstone</h1>
+                    </div>
+                </div>
+
+                <!--Line 1-->
+                <div class="flex flex-wrap">
+                    <div class="w-full md:w-1/2 xl:w-1/3 p-6">
+                        <!--Metric Card-->
+                        <div class="bg-gradient-to-b from-green-200 to-green-100 border-b-4 border-green-600 rounded-lg shadow-xl p-5">
+                            <div class="flex flex-row items-center">
+                                <div class="flex-shrink pr-4">
+                                    <div class="rounded-full p-5 bg-green-600"><img src="./scr/img_poweredrail.png" alt="" width="50"></div>
+                                </div>
+                                <div class="flex-1 text-right md:text-center">
+                                    <h2 class="font-bold uppercase text-gray-600">Power Rail (1=6)</h2>
+                                    <label for="powerrail"></label>
+                                    <input type="text" id="powerrail" name="powerrail" class="mb-2 w-20 text-center rounded-lg"><br>
+                                    <input class="bg-gradient-to-b from-blue-800 to-blue-300 p-1 rounded-lg	" type="button" value="Calculate" onclick="calculate_powerrail()">
+                                </div>
+                                <div class="flex-1 text-right md:text-center">
+                                    <h2 class="font-bold uppercase text-gray-600">Powerrail</h2>
+                                    <p class="font-bold text-3xl" id="powerrail_real"></p>
+                                    <h2 class="font-bold uppercase text-gray-600">Gold Ingot</h2>
+                                    <p class="font-bold text-3xl" id="powerrail_gold"></p>
+                                    <h2 class="font-bold uppercase text-gray-600">Redstone</h2>
+                                    <p class="font-bold text-3xl" id="powerrail_redstone"></p>
+                                    <h2 class="font-bold uppercase text-gray-600">Stick</h2>
+                                    <p class="font-bold text-3xl" id="powerrail_stick"></p>
+                                </div>
+
+                                
+                            </div>
+                        </div>
+                        
+                        <!--/Metric Card-->
+                    </div>
+                    <div class="w-full md:w-1/2 xl:w-1/3 p-6">
+                        <!--Metric Card-->
+                        <div class="bg-gradient-to-b from-pink-200 to-pink-100 border-b-4 border-pink-500 rounded-lg shadow-xl p-5">
+                            <div class="flex flex-row items-center">
+                                <div class="flex-shrink pr-4">
+                                    <div class="rounded-full p-5 bg-pink-600"><img src="./scr/img_track.png" alt="" width="50"></div>
+                                </div>
+                                <div class="flex-1 text-right md:text-center">
+                                    <h2 class="font-bold uppercase text-gray-600">Rail (1=16)</h2>
+                                    <label for="rail"></label>
+                                    <input type="text" id="rail" name="rail" class="mb-2 w-20 text-center rounded-lg"><br>
+                                    <input class="bg-gradient-to-b from-blue-800 to-blue-300 p-1 rounded-lg	" type="button" value="Calculate" onclick="calculate_rail()">
+                                </div>
+                                <div class="flex-1 text-right md:text-center">
+                                    <h2 class="font-bold uppercase text-gray-600">Rail</h2>
+                                    <p class="font-bold text-3xl" id="rail_real"></p>
+                                    <h2 class="font-bold uppercase text-gray-600">Gold Ingot</h2>
+                                    <p class="font-bold text-3xl" id="rail_iron"></p>
+                                    <h2 class="font-bold uppercase text-gray-600">Stick</h2>
+                                    <p class="font-bold text-3xl" id="rail_stick"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/Metric Card-->
+                    </div>
+                    <div class="w-full md:w-1/2 xl:w-1/3 p-6">
+                        <!--Metric Card-->
+                        <div class="bg-gradient-to-b from-yellow-200 to-yellow-100 border-b-4 border-yellow-600 rounded-lg shadow-xl p-5">
+                            <div class="flex flex-row items-center">
+                                <div class="flex-shrink pr-4">
+                                    <div class="rounded-full p-5 bg-yellow-600"><img src="./scr/img_detectorrail.png" alt="" width="50"></div>
+                                </div>
+                                <div class="flex-1 text-right md:text-center">
+                                    <h2 class="font-bold uppercase text-gray-600">Detector Rail (1=6)</h2>
+                                    <label for="detectorrail"></label>
+                                    <input type="text" id="detectorrail" name="detectorrail" class="mb-2 w-20 text-center rounded-lg"><br>
+                                    <input class="bg-gradient-to-b from-blue-800 to-blue-300 p-1 rounded-lg	" type="button" value="Calculate" onclick="calculate_detectorrail()">
+                                </div>
+                                <div class="flex-1 text-right md:text-center">
+                                    <h2 class="font-bold uppercase text-gray-600">Detectorrail</h2>
+                                    <p class="font-bold text-3xl" id="detectorrail_real"></p>
+                                    <h2 class="font-bold uppercase text-gray-600">Iron Ingot</h2>
+                                    <p class="font-bold text-3xl" id="detectorrail_iron"></p>
+                                    <h2 class="font-bold uppercase text-gray-600">Redstone</h2>
+                                    <p class="font-bold text-3xl" id="detectorrail_redstone"></p>
+                                    <h2 class="font-bold text-gray-600">Stone Pressure Plate</h2>
+                                    <p class="font-bold text-3xl" id="detectorrail_stone"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/Metric Card-->
+                    </div>
+                    <!--Line 1-->
+
+                    <!--Line 2-->
+                    <div class="w-full md:w-1/2 xl:w-1/3 p-6">
+                        <!--Metric Card-->
+                        <div class="bg-gradient-to-b from-green-200 to-green-100 border-b-4 border-green-600 rounded-lg shadow-xl p-5">
+                            <div class="flex flex-row items-center">
+                                <div class="flex-shrink pr-4">
+                                    <div class="rounded-full p-5 bg-green-600"><img src="./scr/img_activatorrail.png" alt="" width="50"></div>
+                                </div>
+                                <div class="flex-1 text-right md:text-center">
+                                    <h2 class="font-bold uppercase text-gray-600">Power Rail (1=6)</h2>
+                                    <label for="powerrail"></label>
+                                    <input type="text" id="powerrail" name="powerrail" class="mb-2 w-20 text-center rounded-lg"><br>
+                                    <input class="bg-gradient-to-b from-blue-800 to-blue-300 p-1 rounded-lg	" type="button" value="Calculate" onclick="calculate_powerrail()">
+                                </div>
+                                <div class="flex-1 text-right md:text-center">
+                                    <h2 class="font-bold uppercase text-gray-600">Powerrail</h2>
+                                    <p class="font-bold text-3xl" id="powerrail_real"></p>
+                                    <h2 class="font-bold uppercase text-gray-600">Gold Ingot</h2>
+                                    <p class="font-bold text-3xl" id="powerrail_gold"></p>
+                                    <h2 class="font-bold uppercase text-gray-600">Redstone</h2>
+                                    <p class="font-bold text-3xl" id="powerrail_redstone"></p>
+                                    <h2 class="font-bold uppercase text-gray-600">Stick</h2>
+                                    <p class="font-bold text-3xl" id="powerrail_stick"></p>
+                                </div>
+
+                                
+                            </div>
+                        </div>
+                        
+                        <!--/Metric Card-->
+                    </div>
+                    <div class="w-full md:w-1/2 xl:w-1/3 p-6">
+                        <!--Metric Card-->
+                        <div class="bg-gradient-to-b from-pink-200 to-pink-100 border-b-4 border-pink-500 rounded-lg shadow-xl p-5">
+                            <div class="flex flex-row items-center">
+                                <div class="flex-shrink pr-4">
+                                    <div class="rounded-full p-5 bg-pink-600"><img src="./scr/img_track.png" alt="" width="50"></div>
+                                </div>
+                                <div class="flex-1 text-right md:text-center">
+                                    <h2 class="font-bold uppercase text-gray-600">Rail (1=16)</h2>
+                                    <label for="rail"></label>
+                                    <input type="text" id="rail" name="rail" class="mb-2 w-20 text-center rounded-lg"><br>
+                                    <input class="bg-gradient-to-b from-blue-800 to-blue-300 p-1 rounded-lg	" type="button" value="Calculate" onclick="calculate_rail()">
+                                </div>
+                                <div class="flex-1 text-right md:text-center">
+                                    <h2 class="font-bold uppercase text-gray-600">Rail</h2>
+                                    <p class="font-bold text-3xl" id="rail_real"></p>
+                                    <h2 class="font-bold uppercase text-gray-600">Gold Ingot</h2>
+                                    <p class="font-bold text-3xl" id="rail_iron"></p>
+                                    <h2 class="font-bold uppercase text-gray-600">Stick</h2>
+                                    <p class="font-bold text-3xl" id="rail_stick"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/Metric Card-->
+                    </div>
+                    <div class="w-full md:w-1/2 xl:w-1/3 p-6">
+                        <!--Metric Card-->
+                        <div class="bg-gradient-to-b from-yellow-200 to-yellow-100 border-b-4 border-yellow-600 rounded-lg shadow-xl p-5">
+                            <div class="flex flex-row items-center">
+                                <div class="flex-shrink pr-4">
+                                    <div class="rounded-full p-5 bg-yellow-600"><img src="./scr/img_detectorrail.png" alt="" width="50"></div>
+                                </div>
+                                <div class="flex-1 text-right md:text-center">
+                                    <h2 class="font-bold uppercase text-gray-600">Nugget</h2>
+                                    <p class="font-bold text-3xl" id="result2"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/Metric Card-->
+                    </div>
+                    <!--Line 2-->
+                    
+                    
+                </div>
+                
+
+        
+                
+                
+
+
+            </div>
+        </section>
+<!--Redstone-->
+
+
+    </div>
+</main>
+
+
+
+
+
+
+</body>
+
+</html>
