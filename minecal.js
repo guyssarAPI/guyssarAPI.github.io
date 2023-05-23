@@ -79,7 +79,7 @@
         document.getElementById('powerrail_stick').innerHTML = powerrail_stick;
     }
         //cal PowerRail
-        
+
         //cal Rail
     function calculate_rail(){
         var rail = parseInt(document.getElementById('rail').value); 
@@ -118,11 +118,13 @@
             var activatorrail1 = Math.floor(activatorrail);
 
             var activatorrail_real = activatorrail1*6;
-            document.getElementById('detectorrail_real').innerHTML = detectorrail_real;
+            document.getElementById('activatorrail_real').innerHTML = activatorrail_real;
             var activatorrail_stick = activatorrail1*2;
-            document.getElementById('detectorrail_stick').innerHTML = detectorrail_stick;
+            document.getElementById('activatorrail_stick').innerHTML = activatorrail_stick;
             var activatorrail_iron = activatorrail1*6;
-            document.getElementById('detectorrail_iron').innerHTML = detectorrail_iron;
+            document.getElementById('activatorrail_iron').innerHTML = activatorrail_iron;
+            var activatorrail_redstone_torch = activatorrail1*1;
+            document.getElementById('activatorrail_redstone_torch').innerHTML = activatorrail_redstone_torch;
 
         }
         //cal Activatorrail

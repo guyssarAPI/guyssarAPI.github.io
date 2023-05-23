@@ -13,7 +13,9 @@
     <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/> <!--Replace with your tailwind.css once created-->
     <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet"> <!--Totally optional :) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js" integrity="sha256-xKeoJ50pzbUGkpQxDYHD7o7hxe0LaOGeguUidbq6vis=" crossorigin="anonymous"></script>
-    <script src="https://guyssarapi.github.io/minecal.js"></script>
+    <script src="./minecal.js">
+        
+    </script>
     <style>.hover-nav{background-color: #222; transition: 0.5 ease;}.hover-nav:hover{background-color: #dcdcdc;transition: 0.5 ease;color: black;font-weight: bold;}</style>
 </head>
 
@@ -385,20 +387,20 @@
                                     <div class="rounded-full p-5 bg-green-600"><img src="./scr/img_activatorrail.png" alt="" width="50"></div>
                                 </div>
                                 <div class="flex-1 text-right md:text-center">
-                                    <h2 class="font-bold uppercase text-gray-600">Power Rail (1=6)</h2>
-                                    <label for="powerrail"></label>
-                                    <input type="text" id="powerrail" name="powerrail" class="mb-2 w-20 text-center rounded-lg"><br>
-                                    <input class="bg-gradient-to-b from-blue-800 to-blue-300 p-1 rounded-lg	" type="button" value="Calculate" onclick="calculate_powerrail()">
+                                    <h2 class="font-bold uppercase text-gray-600">Activator Rail (1=6)</h2>
+                                    <label for="activatorrail"></label>
+                                    <input type="text" id="activatorrail" name="activatorrail" class="mb-2 w-20 text-center rounded-lg"><br>
+                                    <input class="bg-gradient-to-b from-blue-800 to-blue-300 p-1 rounded-lg	" type="button" value="Calculate" onclick="calculate_activatorrail()">
                                 </div>
                                 <div class="flex-1 text-right md:text-center">
-                                    <h2 class="font-bold uppercase text-gray-600">Powerrail</h2>
-                                    <p class="font-bold text-3xl" id="powerrail_real"></p>
-                                    <h2 class="font-bold uppercase text-gray-600">Gold Ingot</h2>
-                                    <p class="font-bold text-3xl" id="powerrail_gold"></p>
-                                    <h2 class="font-bold uppercase text-gray-600">Redstone</h2>
-                                    <p class="font-bold text-3xl" id="powerrail_redstone"></p>
+                                    <h2 class="font-bold uppercase text-gray-600">Activatorrail</h2>
+                                    <p class="font-bold text-3xl" id="activatorrail_real"></p>
+                                    <h2 class="font-bold uppercase text-gray-600">Iron Ingot</h2>
+                                    <p class="font-bold text-3xl" id="activatorrail_iron"></p>
+                                    <h2 class="font-bold uppercase text-gray-600">Redstone Torch</h2>
+                                    <p class="font-bold text-3xl" id="activatorrail_redstone_torch"></p>
                                     <h2 class="font-bold uppercase text-gray-600">Stick</h2>
-                                    <p class="font-bold text-3xl" id="powerrail_stick"></p>
+                                    <p class="font-bold text-3xl" id="activatorrail_stick"></p>
                                 </div>
 
                                 
