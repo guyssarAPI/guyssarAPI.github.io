@@ -158,4 +158,53 @@
             
         }
         //cal lever
+
+        //cal Piston
+        function calculate_piston(){
+            
+            var pistion = Math.floor(parseInt(document.getElementById('pistion').value));
+            
+            var pistion_real = pistion*1
+            document.getElementById('pistion_real').innerHTML = pistion_real;
+            var pistion_wood = pistion*3
+            document.getElementById('pistion_wood').innerHTML = pistion_wood;
+            var pistion_cobblestone = pistion*4
+            document.getElementById('pistion_cobblestone').innerHTML = pistion_cobblestone;
+            var pistion_redstone = pistion*1
+            document.getElementById('pistion_redstone').innerHTML = pistion_redstone;
+            var pistion_iron = pistion*1
+            document.getElementById('pistion_iron').innerHTML = pistion_iron;
+
+        }
+        //cal Piston
+
+        //cal Stickypiston
+        function calculate_stickypiston(){
+            
+            var stickypiston = Math.floor(parseInt(document.getElementById('stickypistion').value));
+            
+            var stickypiston_real = stickypiston*1
+            document.getElementById('stickypiston_real').innerHTML = stickypiston_real;
+            var stickypiston_piston = stickypiston*1
+            document.getElementById('stickypiston_piston').innerHTML = stickypiston_piston;
+            var stickypiston_slime = stickypiston*1
+            document.getElementById('stickypiston_slime').innerHTML = stickypiston_slime;
+            
+        }
+        //cal Stickypiston
+
+        //cal Button
+        function calculate_button(){
+            
+            var button = Math.floor(parseInt(document.getElementById('button').value));
+            
+            var button_real = button*1
+            document.getElementById('button_real').innerHTML = button_real;
+            var button_cobblestone = button*1
+            document.getElementById('button_cobblestone').innerHTML = button_cobblestone;
+
+            
+
+        }
+        //cal Button
     //cal redstone
