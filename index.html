@@ -506,26 +506,30 @@
                                 </div>
                                 <div class="flex-1 text-center md:text-center ">
                                     <h2 class="font-bold uppercase text-gray-600">Piston</h2>
-                                    <label for="activatorrail"></label>
-                                    <input type="text" id="activatorrail" name="activatorrail" class="mb-2 w-20 text-center rounded-lg"><br>
-                                    <input class="bg-gradient-to-b from-blue-800 to-blue-300 p-1 rounded-lg	" type="button" value="Calculate" onclick="calculate_activatorrail()">
+                                    <label for="pistion"></label>
+                                    <input type="text" id="pistion" name="pistion" class="mb-2 w-20 text-center rounded-lg"><br>
+                                    <input class="bg-gradient-to-b from-blue-800 to-blue-300 p-1 rounded-lg	" type="button" value="Calculate" onclick="calculate_piston()">
                                 </div>
                                 <div class="flex-1 text-center md:text-center ">
                                     <div class="border-solid border-black border-2 rounded-lg m-1">
-                                        <h2 class="font-bold uppercase text-gray-600">Activatorrail</h2>
-                                        <p class="font-bold text-3xl" id="activatorrail_real"></p>
+                                        <h2 class="font-bold uppercase text-gray-600">Piston</h2>
+                                        <p class="font-bold text-3xl" id="pistion_real"></p>
                                     </div>
                                     <div class="border-solid border-black border-2 rounded-lg m-1">
-                                        <h2 class="font-bold uppercase text-gray-600">Iron Ingot</h2>
-                                        <p class="font-bold text-3xl" id="activatorrail_iron"></p>
+                                        <h2 class="font-bold uppercase text-gray-600">Wood</h2>
+                                        <p class="font-bold text-3xl" id="pistion_wood"></p>
                                     </div>  
                                     <div class="border-solid border-black border-2 rounded-lg m-1">
-                                        <h2 class="font-bold uppercase text-gray-600">Redstone Torch</h2>
-                                        <p class="font-bold text-3xl" id="activatorrail_redstone_torch"></p>
+                                        <h2 class="font-bold uppercase text-gray-600">Cobblestone</h2>
+                                        <p class="font-bold text-3xl" id="pistion_cobblestone"></p>
                                     </div>
                                     <div class="border-solid border-black border-2 rounded-lg m-1">
-                                        <h2 class="font-bold uppercase text-gray-600">Stick</h2>
-                                        <p class="font-bold text-3xl" id="activatorrail_stick"></p>
+                                        <h2 class="font-bold uppercase text-gray-600">Redstone</h2>
+                                        <p class="font-bold text-3xl" id="pistion_redstone"></p>
+                                    </div>
+                                    <div class="border-solid border-black border-2 rounded-lg m-1">
+                                        <h2 class="font-bold uppercase text-gray-600">Iron</h2>
+                                        <p class="font-bold text-3xl" id="pistion_iron"></p>
                                     </div>
                                 </div>
 
@@ -544,23 +548,23 @@
                                 </div>
                                 <div class="flex-1 text-center md:text-center">
                                     <h2 class="font-bold uppercase text-gray-600">Sticky Piston</h2>
-                                    <label for="redstone_torch"></label>
-                                    <input type="text" id="redstone_torch" name="redstone_torch" class="mb-2 w-20 text-center rounded-lg"><br>
-                                    <input class="bg-gradient-to-b from-blue-800 to-blue-300 p-1 rounded-lg	" type="button" value="Calculate" onclick="calculate_redstone_torch()">
+                                    <label for="stickypistion"></label>
+                                    <input type="text" id="stickypistion" name="stickypistion" class="mb-2 w-20 text-center rounded-lg"><br>
+                                    <input class="bg-gradient-to-b from-blue-800 to-blue-300 p-1 rounded-lg	" type="button" value="Calculate" onclick="calculate_stickypiston()">
                                 </div>
                                 <div class="flex-1 text-center md:text-center">
                                 
                                     <div class="border-solid border-black border-2 rounded-lg m-1">
                                         <h2 class="font-bold uppercase text-gray-600">Stickypistion</h2>
-                                        <p class="font-bold text-3xl" id="redstone_torch_real"></p>
+                                        <p class="font-bold text-3xl" id="stickypiston_real"></p>
                                     </div>
                                     <div class="border-solid border-black border-2 rounded-lg m-1">
-                                        <h2 class="font-bold uppercase text-gray-600">Redstone</h2>
-                                        <p class="font-bold text-3xl" id="_redstone_torch_redstone"></p>
+                                        <h2 class="font-bold uppercase text-gray-600">Pistion</h2>
+                                        <p class="font-bold text-3xl" id="stickypiston_piston"></p>
                                     </div>
                                     <div class="border-solid border-black border-2 rounded-lg m-1">
-                                        <h2 class="font-bold uppercase text-gray-600">Stick</h2>
-                                        <p class="font-bold text-3xl" id="_redstone_torch_stick"></p>
+                                        <h2 class="font-bold uppercase text-gray-600">Slime</h2>
+                                        <p class="font-bold text-3xl" id="stickypiston_slime"></p>
                                     </div>
                                 </div>
                             </div>
@@ -572,27 +576,24 @@
                         <div class="bg-gradient-to-b from-yellow-200 to-yellow-100 border-b-4 border-yellow-600 rounded-lg shadow-xl p-5">
                             <div class="flex flex-row items-center">
                                 <div class="flex-shrink pr-4">
-                                    <div class="rounded-full p-5 bg-yellow-600"><img src="./scr/img_lever.png" alt="" width="50"></div>
+                                    <div class="rounded-full p-5 bg-yellow-600"><img src="./scr/img_buttons.webp" alt="" width="50"></div>
                                 </div>
                                 <div class="flex-1 text-center md:text-center">
-                                    <h2 class="font-bold uppercase text-gray-600">Lever</h2>
-                                    <label for="lever"></label>
-                                    <input type="text" id="lever" name="lever" class="mb-2 w-20 text-center rounded-lg"><br>
-                                    <input class="bg-gradient-to-b from-blue-800 to-blue-300 p-1 rounded-lg	" type="button" value="Calculate" onclick="calculate_lever()">
+                                    <h2 class="font-bold uppercase text-gray-600">Button</h2>
+                                    <label for="button"></label>
+                                    <input type="text" id="button" name="button" class="mb-2 w-20 text-center rounded-lg"><br>
+                                    <input class="bg-gradient-to-b from-blue-800 to-blue-300 p-1 rounded-lg	" type="button" value="Calculate" onclick="calculate_button()">
                                 </div>
                                 <div class="flex-1 text-center md:text-center">
                                     <div class="border-solid border-black border-2 rounded-lg m-1">
-                                        <h2 class="font-bold uppercase text-gray-600">Lever</h2>
-                                        <p class="font-bold text-3xl" id="lever_real"></p>
+                                        <h2 class="font-bold uppercase text-gray-600">Button</h2>
+                                        <p class="font-bold text-3xl" id="button_real"></p>
                                     </div>
                                     <div class="border-solid border-black border-2 rounded-lg m-1">
-                                        <h2 class="font-bold uppercase text-gray-600">Cobblestone</h2>
-                                        <p class="font-bold text-3xl" id="lever_cobblestone"></p>
+                                        <h2 class="font-bold uppercase text-gray-600">stone/wood</h2>
+                                        <p class="font-bold text-3xl" id="button_cobblestone"></p>
                                     </div>
-                                    <div class="border-solid border-black border-2 rounded-lg m-1">
-                                        <h2 class="font-bold uppercase text-gray-600">Stick</h2>
-                                        <p class="font-bold text-3xl" id="lever_stick"></p>
-                                    </div>
+
                                 </div>
                             </div>
                         </div>
