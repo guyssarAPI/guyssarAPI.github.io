@@ -11,13 +11,12 @@
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    
     <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet"> <!--Totally optional :) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js" integrity="sha256-xKeoJ50pzbUGkpQxDYHD7o7hxe0LaOGeguUidbq6vis=" crossorigin="anonymous"></script>
     <script src="./minecal.js">
         
     </script>
-    <style>::-webkit-scrollbar {width: 15px;}::-webkit-scrollbar-track {background: #7e7e7e;}::-webkit-scrollbar-thumb {background: #282234;}::-webkit-scrollbar-thumb:hover {background: #555;}.hover-nav{background-color: #222; transition: 0.5 ease;}.hover-nav:hover{background-color: #dcdcdc;transition: 0.5 ease;color: black;font-weight: bold;}</style>
+    <style>.hover-nav{background-color: #222; transition: 0.5 ease;}.hover-nav:hover{background-color: #dcdcdc;transition: 0.5 ease;color: black;font-weight: bold;}</style>
 </head>
 
 <body class="bg-gray-800 font-sans leading-normal tracking-normal mt-12">
@@ -140,18 +139,13 @@
                         </div>
                         <!--/Metric Card-->
                     </div>
-                    
+
                 </div>
+            
                 
 
         <!--Ingot-->
-                <div id="main" class="main-content flex-1 bg-gray-100 mt-12 md:mt-2 pb-24 md:pb-5">
 
-                    <div class="bg-gray-800 pt-3">
-                        <div class="rounded-tl-3xl bg-gradient-to-r from-blue-900 to-gray-800 p-4 shadow text-2xl text-white">
-                            <h1 class="font-bold pl-2">Ore Ingot To</h1>
-                        </div>
-                    </div>
     
                     <div class="flex flex-wrap">
                         <div class="w-full md:w-1/2 xl:w-1/3 p-6">
@@ -205,17 +199,11 @@
                         </div>
                         
                     </div>
-                </div>
+
         <!--Ingot-->
 
         <!--Nugget-->
-                    <div id="main" class="main-content flex-1 bg-gray-100 mt-12 md:mt-2 pb-24 md:pb-5">
-
-                        <div class="bg-gray-800 pt-3">
-                            <div class="rounded-tl-3xl bg-gradient-to-r from-blue-900 to-gray-800 p-4 shadow text-2xl text-white">
-                                <h1 class="font-bold pl-2">Ore Nugget To</h1>
-                            </div>
-                        </div>
+                    
         
                         <div class="flex flex-wrap">
                             <div class="w-full md:w-1/2 xl:w-1/3 p-6">
@@ -268,7 +256,6 @@
                                 <!--/Metric Card-->
                             </div>
                             
-                        </div>
 
                     </div>
             <!--Nugget-->
@@ -519,30 +506,26 @@
                                 </div>
                                 <div class="flex-1 text-center md:text-center ">
                                     <h2 class="font-bold uppercase text-gray-600">Piston</h2>
-                                    <label for="pistion"></label>
-                                    <input type="text" id="pistion" name="pistion" class="mb-2 w-20 text-center rounded-lg"><br>
-                                    <input class="bg-gradient-to-b from-blue-800 to-blue-300 p-1 rounded-lg	" type="button" value="Calculate" onclick="calculate_piston()">
+                                    <label for="activatorrail"></label>
+                                    <input type="text" id="activatorrail" name="activatorrail" class="mb-2 w-20 text-center rounded-lg"><br>
+                                    <input class="bg-gradient-to-b from-blue-800 to-blue-300 p-1 rounded-lg	" type="button" value="Calculate" onclick="calculate_activatorrail()">
                                 </div>
                                 <div class="flex-1 text-center md:text-center ">
                                     <div class="border-solid border-black border-2 rounded-lg m-1">
-                                        <h2 class="font-bold uppercase text-gray-600">Piston</h2>
-                                        <p class="font-bold text-3xl" id="pistion_real"></p>
+                                        <h2 class="font-bold uppercase text-gray-600">Activatorrail</h2>
+                                        <p class="font-bold text-3xl" id="activatorrail_real"></p>
                                     </div>
                                     <div class="border-solid border-black border-2 rounded-lg m-1">
-                                        <h2 class="font-bold uppercase text-gray-600">Wood</h2>
-                                        <p class="font-bold text-3xl" id="pistion_wood"></p>
+                                        <h2 class="font-bold uppercase text-gray-600">Iron Ingot</h2>
+                                        <p class="font-bold text-3xl" id="activatorrail_iron"></p>
                                     </div>  
                                     <div class="border-solid border-black border-2 rounded-lg m-1">
-                                        <h2 class="font-bold uppercase text-gray-600">Cobblestone</h2>
-                                        <p class="font-bold text-3xl" id="pistion_cobblestone"></p>
+                                        <h2 class="font-bold uppercase text-gray-600">Redstone Torch</h2>
+                                        <p class="font-bold text-3xl" id="activatorrail_redstone_torch"></p>
                                     </div>
                                     <div class="border-solid border-black border-2 rounded-lg m-1">
-                                        <h2 class="font-bold uppercase text-gray-600">Redstone</h2>
-                                        <p class="font-bold text-3xl" id="pistion_redstone"></p>
-                                    </div>
-                                    <div class="border-solid border-black border-2 rounded-lg m-1">
-                                        <h2 class="font-bold uppercase text-gray-600">Iron</h2>
-                                        <p class="font-bold text-3xl" id="pistion_iron"></p>
+                                        <h2 class="font-bold uppercase text-gray-600">Stick</h2>
+                                        <p class="font-bold text-3xl" id="activatorrail_stick"></p>
                                     </div>
                                 </div>
 
@@ -561,23 +544,23 @@
                                 </div>
                                 <div class="flex-1 text-center md:text-center">
                                     <h2 class="font-bold uppercase text-gray-600">Sticky Piston</h2>
-                                    <label for="stickypistion"></label>
-                                    <input type="text" id="stickypistion" name="stickypistion" class="mb-2 w-20 text-center rounded-lg"><br>
-                                    <input class="bg-gradient-to-b from-blue-800 to-blue-300 p-1 rounded-lg	" type="button" value="Calculate" onclick="calculate_stickypiston()">
+                                    <label for="redstone_torch"></label>
+                                    <input type="text" id="redstone_torch" name="redstone_torch" class="mb-2 w-20 text-center rounded-lg"><br>
+                                    <input class="bg-gradient-to-b from-blue-800 to-blue-300 p-1 rounded-lg	" type="button" value="Calculate" onclick="calculate_redstone_torch()">
                                 </div>
                                 <div class="flex-1 text-center md:text-center">
                                 
                                     <div class="border-solid border-black border-2 rounded-lg m-1">
                                         <h2 class="font-bold uppercase text-gray-600">Stickypistion</h2>
-                                        <p class="font-bold text-3xl" id="stickypiston_real"></p>
+                                        <p class="font-bold text-3xl" id="redstone_torch_real"></p>
                                     </div>
                                     <div class="border-solid border-black border-2 rounded-lg m-1">
-                                        <h2 class="font-bold uppercase text-gray-600">Pistion</h2>
-                                        <p class="font-bold text-3xl" id="stickypiston_piston"></p>
+                                        <h2 class="font-bold uppercase text-gray-600">Redstone</h2>
+                                        <p class="font-bold text-3xl" id="_redstone_torch_redstone"></p>
                                     </div>
                                     <div class="border-solid border-black border-2 rounded-lg m-1">
-                                        <h2 class="font-bold uppercase text-gray-600">Slime</h2>
-                                        <p class="font-bold text-3xl" id="stickypiston_slime"></p>
+                                        <h2 class="font-bold uppercase text-gray-600">Stick</h2>
+                                        <p class="font-bold text-3xl" id="_redstone_torch_stick"></p>
                                     </div>
                                 </div>
                             </div>
@@ -589,24 +572,27 @@
                         <div class="bg-gradient-to-b from-yellow-200 to-yellow-100 border-b-4 border-yellow-600 rounded-lg shadow-xl p-5">
                             <div class="flex flex-row items-center">
                                 <div class="flex-shrink pr-4">
-                                    <div class="rounded-full p-5 bg-yellow-600"><img src="./scr/img_buttons.webp" alt="" width="50"></div>
+                                    <div class="rounded-full p-5 bg-yellow-600"><img src="./scr/img_lever.png" alt="" width="50"></div>
                                 </div>
                                 <div class="flex-1 text-center md:text-center">
-                                    <h2 class="font-bold uppercase text-gray-600">Button</h2>
-                                    <label for="button"></label>
-                                    <input type="text" id="button" name="button" class="mb-2 w-20 text-center rounded-lg"><br>
-                                    <input class="bg-gradient-to-b from-blue-800 to-blue-300 p-1 rounded-lg	" type="button" value="Calculate" onclick="calculate_button()">
+                                    <h2 class="font-bold uppercase text-gray-600">Lever</h2>
+                                    <label for="lever"></label>
+                                    <input type="text" id="lever" name="lever" class="mb-2 w-20 text-center rounded-lg"><br>
+                                    <input class="bg-gradient-to-b from-blue-800 to-blue-300 p-1 rounded-lg	" type="button" value="Calculate" onclick="calculate_lever()">
                                 </div>
                                 <div class="flex-1 text-center md:text-center">
                                     <div class="border-solid border-black border-2 rounded-lg m-1">
-                                        <h2 class="font-bold uppercase text-gray-600">Button</h2>
-                                        <p class="font-bold text-3xl" id="button_real"></p>
+                                        <h2 class="font-bold uppercase text-gray-600">Lever</h2>
+                                        <p class="font-bold text-3xl" id="lever_real"></p>
                                     </div>
                                     <div class="border-solid border-black border-2 rounded-lg m-1">
-                                        <h2 class="font-bold uppercase text-gray-600">stone/wood</h2>
-                                        <p class="font-bold text-3xl" id="button_cobblestone"></p>
+                                        <h2 class="font-bold uppercase text-gray-600">Cobblestone</h2>
+                                        <p class="font-bold text-3xl" id="lever_cobblestone"></p>
                                     </div>
-
+                                    <div class="border-solid border-black border-2 rounded-lg m-1">
+                                        <h2 class="font-bold uppercase text-gray-600">Stick</h2>
+                                        <p class="font-bold text-3xl" id="lever_stick"></p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -620,63 +606,61 @@
 <!--Redstone-->
 
 <!--Tools-->
-        <section class="w-full" >
+    <section class="w-full" >
 
             <div id="" class="main-content flex-1 bg-gray-100 mt-12 md:mt-2 pb-24 md:pb-5">
 
 
-                <div class="bg-gray-800 pt-3" >
-                    <div class="rounded-tl-3xl bg-gradient-to-r from-cyan-500 to-gray-800 p-4 shadow text-2xl text-white">
-                        <h1 class="font-bold pl-2">Tools</h1>
+                    <div class="bg-gray-800 pt-3" >
+                        <div class="rounded-tl-3xl bg-gradient-to-r from-cyan-500 to-gray-800 p-4 shadow text-2xl text-white">
+                            <h1 class="font-bold pl-2">Tools</h1>
+                        </div>
                     </div>
-                </div>
 
 
 
 
             </div>
 
-        </section>
+    </section>
 <!--Tools-->
 
 <!--Block-->
-<section class="w-full" >
+    <section class="w-full" >
 
-    <div id="" class="main-content flex-1 bg-gray-100 mt-12 md:mt-2 pb-24 md:pb-5">
+        <div id="" class="main-content flex-1 bg-gray-100 mt-12 md:mt-2 pb-24 md:pb-5">
 
 
-        <div class="bg-gray-800 pt-3" >
-            <div class="rounded-tl-3xl bg-gradient-to-r from-orange-500 to-gray-800 p-4 shadow text-2xl text-white">
-                <h1 class="font-bold pl-2">Block</h1>
+            <div class="bg-gray-800 pt-3" >
+                <div class="rounded-tl-3xl bg-gradient-to-r from-orange-500 to-gray-800 p-4 shadow text-2xl text-white">
+                    <h1 class="font-bold pl-2">Block</h1>
+                </div>
             </div>
+
+
+
+
         </div>
 
-
-
-
-    </div>
-
-</section>
+    </section>
 <!--Block-->
 
 <!--Portal-->
-<section class="w-full" >
+    <section class="w-full" >
 
-    <div id="" class="main-content flex-1 bg-gray-100 mt-12 md:mt-2 pb-24 md:pb-5">
+        <div id="" class="main-content flex-1 bg-gray-100 mt-12 md:mt-2 pb-24 md:pb-5">
 
 
-        <div class="bg-gray-800 pt-3" >
-            <div class="rounded-tl-3xl bg-gradient-to-r from-fuchsia-500 to-gray-800 p-4 shadow text-2xl text-white">
-                <h1 class="font-bold pl-2">Portal</h1>
+            <div class="bg-gray-800 pt-3" >
+                <div class="rounded-tl-3xl bg-gradient-to-r from-fuchsia-500 to-gray-800 p-4 shadow text-2xl text-white">
+                    <h1 class="font-bold pl-2">Portal</h1>
+                </div>
             </div>
+
+
         </div>
 
-
-
-
-    </div>
-
-</section>
+    </section>
 <!--Portal-->
 
 
